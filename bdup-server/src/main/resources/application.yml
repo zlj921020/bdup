@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: bdup
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      enabled: false
+  data:
+    rest:
+      returnBodyOnCreate: true
+      returnBodyOnUpdate: true
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+    freemarker:
+      cache: false    #页面不加载缓存，修改即时生效
+  jackson:
+    timeZone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      fail-on-empty-beans: false
+      write-null-map-values: true
+      write-empty-json-arrays: true
+  thymeleaf:
+    mode: LEGACYHTML5
+  quartz:
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: BdupJobScheduler
+            instanceId: AUTO
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 100
+            threadPriority: 5
+          jobStore:
+            misfireThreshold: 120000
+
+logging:
+  level:
+    com.ctrip.framework.apollo.internals.RemoteConfigLongPollService: error
+    com.ctrip.framework.apollo.internals.RemoteConfigRepository: error
+jwt:
+  #JWT存储请求头
+  tokenHeader: Authorization
+  #JWT 加解密使用的密钥
+  secret: bdup-secret
+  #JWT超时60*60*24（一天）
+  expiration: 604800
+  #JWT 负载中拿到的开头
+  tokenHead: Bearer

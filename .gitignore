@@ -1,0 +1,3 @@
+# Project exclude paths
+/bdup-generator/target/
+/bdup-server/target/

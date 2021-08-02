@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdup.etl.mapper.DbPoolMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bdup.etl.entity.DbPool">
+        <id column="dbid" property="dbid" />
+        <result column="dbbh" property="dbbh" />
+        <result column="dbname" property="dbname" />
+        <result column="dbip" property="dbip" />
+        <result column="dbport" property="dbport" />
+        <result column="dborcl" property="dborcl" />
+        <result column="loginname" property="loginname" />
+        <result column="password" property="password" />
+        <result column="sourcedbtype" property="sourcedbtype" />
+        <result column="version" property="version" />
+        <result column="sync" property="sync" />
+        <result column="topic" property="topic" />
+        <result column="czy" property="czy" />
+        <result column="czsj" property="czsj" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        dbid, dbbh, dbname, dbip, dbport, dborcl, loginname, password, sourcedbtype, version, sync, topic, czy, czsj
+    </sql>
+
+</mapper>

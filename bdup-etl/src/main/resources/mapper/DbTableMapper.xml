@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdup.etl.mapper.DbTableMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bdup.etl.entity.DbTable">
+        <id column="tableid" property="tableid" />
+        <result column="targetowner" property="targetowner" />
+        <result column="targettable" property="targettable" />
+        <result column="targetdbtype" property="targetdbtype" />
+        <result column="tablecomments" property="tablecomments" />
+        <result column="state" property="state" />
+        <result column="dbid" property="dbid" />
+        <result column="sourceowner" property="sourceowner" />
+        <result column="sourcetable" property="sourcetable" />
+        <result column="sourcedbtype" property="sourcedbtype" />
+        <result column="loadtype" property="loadtype" />
+        <result column="loadtool" property="loadtool" />
+        <result column="syncmethod" property="syncmethod" />
+        <result column="appendbycolumn" property="appendbycolumn" />
+        <result column="cron" property="cron" />
+        <result column="haspk" property="haspk" />
+        <result column="cshbz" property="cshbz" />
+        <result column="errtext" property="errtext" />
+        <result column="dataxscript" property="dataxscript" />
+        <result column="hdfsscript" property="hdfsscript" />
+        <result column="oraclescript" property="oraclescript" />
+        <result column="postgresscript" property="postgresscript" />
+        <result column="phoenixscript" property="phoenixscript" />
+        <result column="czy" property="czy" />
+        <result column="czsj" property="czsj" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        tableid, targetowner, targettable, targetdbtype, tablecomments, state, dbid, sourceowner, sourcetable, sourcedbtype, loadtype, loadtool, syncmethod, appendbycolumn, cron, haspk, cshbz, errtext, dataxscript, hdfsscript, oraclescript, postgresscript, phoenixscript, czy, czsj
+    </sql>
+
+</mapper>

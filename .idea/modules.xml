@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bdup.iml" filepath="$PROJECT_DIR$/bdup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bdup-etl/bdup-etl.iml" filepath="$PROJECT_DIR$/bdup-etl/bdup-etl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bdup-generator/bdup-generator.iml" filepath="$PROJECT_DIR$/bdup-generator/bdup-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bdup-server/bdup-server.iml" filepath="$PROJECT_DIR$/bdup-server/bdup-server.iml" />
+    </modules>
+  </component>
+</project>

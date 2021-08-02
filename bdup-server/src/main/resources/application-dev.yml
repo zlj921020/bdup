@@ -1,0 +1,55 @@
+server:
+  port: 7070
+  servlet:
+    context-path: /bdup
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://47.98.184.76:5432/postgres
+    username: postgres
+    password: postgres
+    tomcat:
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 3600000
+      validation-query: select 1
+  thymeleaf:
+    cache: false
+  mail:
+    host: smtp.qq.com
+    port: 465
+    default-encoding: utf-8
+    username: 413432717@qq.com
+    password: fzdacbzfseyxbhea
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+        debug: true
+  quartz:
+    job-store-type: memory
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  redis:
+    host: 47.98.184.76
+    port: 6379
+    password: oracledba
+    timeout: 20000
+    database: 1
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+logging:
+  level:
+    root: INFO
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
